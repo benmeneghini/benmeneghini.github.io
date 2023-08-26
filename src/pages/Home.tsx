@@ -22,6 +22,8 @@ const Home = () => {
     }
 
     const copyToClipboard = (text: string) => {
+        if (!window.isSecureContext) {return;}
+
         let alert = document.getElementById("suc-alert") as HTMLElement;
         let alertText = document.getElementById("suc-alert-text") as HTMLElement;
 
