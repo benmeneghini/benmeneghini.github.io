@@ -1,33 +1,49 @@
 import {Info, Projects} from '../info/MyInfo';
 import Navbar from '../components/Navbar';
-import {isVisible} from "@testing-library/user-event/dist/utils";
+import SuccessAlert from "../components/SuccessAlert";
 
 const Home = () => {
 
     const toggleNav = () => {
-        let navbar = document.getElementById("navbar");
-        let menuIcon = document.getElementById("menuIcon");
-        let closeIcon = document.getElementById("closeIcon");
-        console.log("h")
-        if (navbar !== null && menuIcon !== null && closeIcon !== null) {
-            console.log("t")
-            if (navbar.className === "invisible md:visible") {
-                console.log("s")
-                navbar.className = "";
-                menuIcon.style.visibility = "hidden";
-                closeIcon.style.visibility = "visible";
-            } else {
-                navbar.className = "invisible md:visible";
-                menuIcon.style.visibility = "visible";
-                closeIcon.style.visibility = "hidden";
-            }
+        let navbar = document.getElementById("navbar") as HTMLElement;
+        let menuIcon = document.getElementById("menuIcon") as HTMLElement;
+        let closeIcon = document.getElementById("closeIcon") as HTMLElement;
+
+        if (navbar.className === "invisible md:visible") {
+            console.log("s")
+            navbar.className = "";
+            menuIcon.style.visibility = "hidden";
+            closeIcon.style.visibility = "visible";
+        } else {
+            navbar.className = "invisible md:visible";
+            menuIcon.style.visibility = "visible";
+            closeIcon.style.visibility = "hidden";
         }
+    }
+
+    const copyToClipboard = (text: string) => {
+        let alert = document.getElementById("suc-alert") as HTMLElement;
+        let alertText = document.getElementById("suc-alert-text") as HTMLElement;
+
+        navigator.clipboard.writeText(text)
+            .then( () => {
+                alert.style.visibility = "visible";
+                alertText.innerText = "Copied to clipboard!"
+
+                setTimeout(() => {
+                    alert.style.visibility = "hidden"
+                }, 3000);
+                });
     }
 
     return (
         <div className="bg-red-50 h-screen font-mono">
             <div id="navbar" className="invisible md:visible">
                 <Navbar />
+            </div>
+
+            <div className="flex justify-end p-5">
+                <SuccessAlert />
             </div>
 
             <div id="menuIcon" className="flex flex-col z-[1034] fixed m-2 top-0 left-0">
@@ -50,8 +66,11 @@ const Home = () => {
                 <br/>
                 <br/>
 
-                <div id="about">
-                    <span>{Info.about}</span>
+                <div id="about" className="pt-5">
+                    <span>{Info.about_1}</span>
+                    <br/>
+                    <br/>
+                    <span>{Info.about_2}</span>
                 </div>
 
                 <br/>
@@ -120,7 +139,7 @@ const Home = () => {
             <div id="contact" className="flex md:ml-40 justify-center bg-neutral-950 h-full max-h-48 md:max-h-40">
                 <div className="text-center text-amber-50 px-12 py-5 md:grid md:grid-cols-3 place-items-center">
 
-                    <div className="font-bold flex items-center">
+                    <div className="font-bold flex items-center hover:cursor-pointer" onClick={() => {copyToClipboard(Info.email)}}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                         </svg>
@@ -130,8 +149,9 @@ const Home = () => {
                     <div className="inline-block w-0.5 self-stretch bg-amber-50 opacity-100 dark:opacity-50
                     invisible md:visible"></div>
 
-                    <div className="font-bold flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <div className="font-bold flex items-center hover:cursor-pointer" onClick={() => {copyToClipboard(Info.number)}}>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                             stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                         </svg>
                         <span className="ml-2">{Info.number}</span>
