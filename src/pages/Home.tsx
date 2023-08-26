@@ -12,6 +12,7 @@ const Home = () => {
         if (navbar !== null && menuIcon !== null && closeIcon !== null) {
             console.log("t")
             if (navbar.className === "invisible md:visible") {
+                console.log("s")
                 navbar.className = "";
                 menuIcon.style.visibility = "hidden";
                 closeIcon.style.visibility = "visible";
@@ -37,7 +38,7 @@ const Home = () => {
             </div>
 
             <div id="closeIcon" className="flex flex-col z-[1035] fixed ml-32 mt-2
-             text-amber-50">
+             text-amber-50 visible md:invisible">
                 <button onClick={() => {toggleNav()}}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
