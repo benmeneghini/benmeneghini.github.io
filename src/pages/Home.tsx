@@ -1,6 +1,7 @@
 import {Info, Projects} from '../info/MyInfo';
 import Navbar from '../components/Navbar';
 import SuccessAlert from "../components/SuccessAlert";
+import {Link} from 'react-scroll';
 
 const Home = () => {
 
@@ -172,9 +173,9 @@ const Home = () => {
                     <br/>
 
                     <div className="md:col-start-2 mb-2">
-                        <button className="border-2 rounded shadow p-2 mt-2"><a href="#main" className="flex items-center">Back to Top<svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ml-2">
+                        <button className="border-2 rounded shadow p-2 mt-2"><Link className="flex items-center hover:cursor-pointer" to="main" spy={true} smooth={true} duration={500}>Back to Top<svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ml-2">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 9l6-6m0 0l6 6m-6-6v12a6 6 0 01-12 0v-3" />
-                        </svg></a>
+                        </svg></Link>
                         </button>
                     </div>
 
