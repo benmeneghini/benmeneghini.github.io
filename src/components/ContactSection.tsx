@@ -19,7 +19,7 @@ const copyToClipboard = (text: string) => {
 }
 export const ContactSection = () => {
     return (
-        <div  className="flex md:ml-40 justify-center bg-neutral-950 h-full max-h-64 md:max-h-56">
+        <div  className="flex md:ml-40 justify-center bg-neutral-950 h-full max-h-96 md:max-h-96">
             <div className="text-center text-amber-50 px-12 py-5 md:grid md:grid-cols-3 place-items-center">
                 <h1 className="text-amber-50 text-2xl mb-6 md:col-span-9">Contact</h1>
 
@@ -41,9 +41,21 @@ export const ContactSection = () => {
                     <span className="ml-2">{Info.number}</span>
                 </div>
 
-                {/*<div className="md:col-start-3 bg-neutral-600">*/}
-                {/*    Test*/}
-                {/*</div>*/}
+                <div className="md:col-start-2 mt-6">
+                    <form className="bg-red-50 text-black p-3 md:p-5 rounded grid grid-cols-2 w-72 md:w-96">
+                        <label className="text-start mb-1">Name:</label>
+                        <label className="text-start ml-2 mb-1">Email:</label>
+
+                        <input className="mr-2 bg-transparent outline outline-1 outline-offset-4 rounded"
+                               type="text" id="name" name="name" placeholder="John Doe"/>
+                        <input className="ml-2 bg-transparent outline outline-1 outline-offset-4 rounded"
+                               type="email" id="email" name="email" placeholder="johndoe@gmail.com"/>
+
+                        <label className="text-start col-span-2 mt-2 mb-1">Message:</label>
+                        <input className="bg-transparent col-span-2 outline outline-1 outline-offset-4 rounded"
+                                type="text" id="message" name="message" placeholder="Hey Ben, I'm John!"/>
+                    </form>
+                </div>
 
                 <div className="md:col-start-2 mb-2 mt-2">
                     <button className="border-2 rounded shadow p-2 mt-2"><Link className="flex items-center hover:cursor-pointer" to="hero" spy={true} smooth={true} duration={500}>Back to Top<svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ml-2">
