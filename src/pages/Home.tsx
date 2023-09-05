@@ -1,7 +1,5 @@
-import {Info, Projects} from '../info/MyInfo';
 import Navbar from '../components/Navbar';
 import SuccessAlert from "../components/SuccessAlert";
-import {Link} from 'react-scroll';
 import {HeroSection} from "../components/HeroSection";
 import {AboutSection} from "../components/AboutSection";
 import {ProjectSection} from "../components/ProjectSection";
@@ -79,14 +77,6 @@ const Home = () => {
                 <div id="projects">
                     <ProjectSection />
                 </div>
-
-                {/*    temp breaks*/}
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
 
             </div>
 

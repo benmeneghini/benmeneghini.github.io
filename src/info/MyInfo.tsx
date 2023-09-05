@@ -13,10 +13,10 @@ const Info = {
 
 const Projects = [
     {
-        title: "Discord Timer Bot",
+        title: "Project Title",
         description: "This is a description. I like descriptions a lot because descriptive.",
         date: "12-12-2021",
-        imageSrc: "src/images/imagetest.jpg",
+        imageName: "imagetest.jpg",
         technologies: ["Gradle", "JDA", "Java"],
         link: "timerbot.com"
     },
@@ -24,7 +24,7 @@ const Projects = [
         title: "P2",
         description: "",
         date: "",
-        imageSrc: "",
+        imageName: "",
         technologies: [],
         link: ""
     },
@@ -32,7 +32,7 @@ const Projects = [
         title: "P3",
         description: "",
         date: "",
-        imageSrc: "",
+        imageName: "",
         technologies: [],
         link: ""
     },
@@ -40,7 +40,7 @@ const Projects = [
         title: "P4",
         description: "",
         date: "",
-        imageSrc: "",
+        imageName: "",
         technologies: [],
         link: ""
     },
@@ -48,7 +48,7 @@ const Projects = [
         title: "P5",
         description: "",
         date: "",
-        imageSrc: "",
+        imageName: "",
         technologies: [],
         link: ""
     }
