@@ -2,7 +2,7 @@ const SuccessAlert = () => {
     return (
         <div id="suc-alert"
             className="z-3000 fixed mb-3 inline-flex w-fit justify-end items-center
-            rounded-lg bg-green-200 px-6 py-5 text-base text-green-700
+            rounded-lg bg-green-200 px-6 py-5 text-base text-green-700 shadow
             mt-3 mr-3"
             role="alert" style={{visibility: "hidden"}}>
             <span className="mr-2">

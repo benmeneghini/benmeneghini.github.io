@@ -1,7 +1,7 @@
 export const ProjectSection = () => {
     return (
         <div className="carousel w-full">
-            <h1 className="text-2xl">Projects</h1>
+            <h1 className="text-3xl">Projects</h1>
             <br/>
             {/*    use the ProjectItems to make these from Projects list*/}
 

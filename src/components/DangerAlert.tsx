@@ -2,7 +2,7 @@ const DangerAlert = () => {
     return (
         <div id="dan-alert"
             className="z-3000 fixed mb-3 inline-flex w-fit justify-end items-center
-             rounded-lg bg-red-100 px-6 py-5 text-base text-red-700
+             rounded-lg bg-red-100 px-6 py-5 text-base text-red-700 shadow
              mt-3 mr-3"
             role="alert" style={{visibility: "hidden"}}>
             <span className="mr-2">

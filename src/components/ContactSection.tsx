@@ -68,7 +68,7 @@ export const ContactSection = () => {
     return (
         <div className="flex md:ml-40 justify-center bg-neutral-950">
             <div className="text-center text-amber-50 px-12 py-5 md:grid md:grid-cols-3 place-items-center">
-                <h1 className="text-amber-50 text-2xl mb-12 md:col-span-9">Contact</h1>
+                <h1 className="text-amber-50 text-3xl mb-12 md:col-span-9">Contact</h1>
 
                 <div className="font-bold flex items-center hover:cursor-pointer" onClick={() => {copyToClipboard(Info.email)}}>
                     <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -115,7 +115,8 @@ export const ContactSection = () => {
                 </div>
 
                 <div className="md:col-start-2 mb-2 mt-6">
-                    <button className="border-2 rounded shadow p-2 mt-2"><Link className="flex items-center hover:cursor-pointer" to="hero" spy={true} smooth={true} duration={500}>Back to Top<svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ml-2">
+                    <button className="border-2 rounded shadow p-2 mt-2 hover:bg-white hover:text-black">
+                        <Link className="flex items-center hover:cursor-pointer" to="hero" spy={true} smooth={true} duration={500}>Back to Top<svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ml-2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 9l6-6m0 0l6 6m-6-6v12a6 6 0 01-12 0v-3" />
                     </svg></Link>
                     </button>

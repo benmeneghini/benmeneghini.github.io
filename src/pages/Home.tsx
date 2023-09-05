@@ -65,41 +65,22 @@ const Home = () => {
                 </div>
             </div>
 
-            <div id="main" className=" bg-red-50 md:ml-40 px-12 py-5 z-50">
-
-                <br/>
-                <hr/>
-                <br/>
+            <div id="main" className=" bg-red-50 md:ml-40 px-12 py-5 z-50 shadow-2xl
+            border-t-2 border-b-2 border-neutral-950">
 
                 <div id="about">
                     <AboutSection />
                 </div>
 
                 <br/>
-                <hr/>
-                <br/>
-
-                {/*    temp breaks*/}
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+                <hr className="border-neutral-950"/>
                 <br/>
 
                 <div id="projects">
                     <ProjectSection />
                 </div>
 
-                <br/>
-                <hr/>
-                <br/>
-
-                {/*<div id="contact" className="h-screen bg-neutral-950">*/}
-                {/*    */}
-                {/*</div>*/}
-
-            {/*    temp breaks*/}
+                {/*    temp breaks*/}
                 <br/>
                 <br/>
                 <br/>
