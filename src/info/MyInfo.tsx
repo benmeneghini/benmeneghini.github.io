@@ -13,12 +13,44 @@ const Info = {
 
 const Projects = [
     {
-    title: "Discord Timer Bot",
-    description: "",
-    date: "",
-    image: "",
-    technologies: ["Gradle, JDA, Java"],
-    link: ""
+        title: "Discord Timer Bot",
+        description: "This is a description. I like descriptions a lot because descriptive.",
+        date: "12-12-2021",
+        imageSrc: "src/images/imagetest.jpg",
+        technologies: ["Gradle", "JDA", "Java"],
+        link: "timerbot.com"
+    },
+    {
+        title: "P2",
+        description: "",
+        date: "",
+        imageSrc: "",
+        technologies: [],
+        link: ""
+    },
+    {
+        title: "P3",
+        description: "",
+        date: "",
+        imageSrc: "",
+        technologies: [],
+        link: ""
+    },
+    {
+        title: "P4",
+        description: "",
+        date: "",
+        imageSrc: "",
+        technologies: [],
+        link: ""
+    },
+    {
+        title: "P5",
+        description: "",
+        date: "",
+        imageSrc: "",
+        technologies: [],
+        link: ""
     }
 ]
 
