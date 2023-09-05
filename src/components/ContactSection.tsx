@@ -88,7 +88,7 @@ export const ContactSection = () => {
                     <span className="ml-2">{Info.number}</span>
                 </div>
 
-                <div className="md:col-start-2 mt-12">
+                <div className="md:col-start-2 mt-12 mb-6">
                     <form onSubmit={sendMessage} className="bg-red-50 text-black p-3 md:p-5 rounded grid grid-cols-4 w-72 md:w-96">
                         <label className="text-start mb-1 col-span-2">Name:</label>
                         <label className="text-start ml-2 mb-1 col-span-2">Email:</label>
