@@ -1,5 +1,7 @@
 import {Info} from "../info/MyInfo";
 import {Link} from "react-scroll";
+import {ChangeEvent, FormEvent, useState} from "react";
+import sendEmail from "../services/sendEmail";
 
 
 const copyToClipboard = (text: string) => {
@@ -17,11 +19,56 @@ const copyToClipboard = (text: string) => {
             }, 3000);
         });
 }
+
 export const ContactSection = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    const handleInput = (e: ChangeEvent<HTMLInputElement>, inputType: string) => {
+        switch (inputType) {
+            case "name":
+                setName(e.target.value);
+                break;
+            case "email":
+                setEmail(e.target.value);
+                break;
+            case "message":
+                setMessage(e.target.value);
+                break;
+        }
+    }
+
+    const sendMessage = async (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        // if any are empty show danger alert
+        if (name.length === 0 ||
+            email.length === 0 ||
+            message.length === 0) {
+            let alert = document.getElementById("dan-alert") as HTMLElement;
+            let alertText = document.getElementById("dan-alert-text") as HTMLElement;
+            alert.style.visibility = "visible";
+            alertText.innerText = "Please fill in all fields!"
+            setTimeout(() => {
+                alert.style.visibility = "hidden"
+            }, 3000);
+
+        } else {
+            // email myself message
+            await sendEmail(name, email, message);
+
+            // reset inputs
+            setName("");
+            setEmail("");
+            setMessage("");
+        }
+    }
+
     return (
-        <div  className="flex md:ml-40 justify-center bg-neutral-950 h-full max-h-96 md:max-h-96">
+        <div className="flex md:ml-40 justify-center bg-neutral-950">
             <div className="text-center text-amber-50 px-12 py-5 md:grid md:grid-cols-3 place-items-center">
-                <h1 className="text-amber-50 text-2xl mb-6 md:col-span-9">Contact</h1>
+                <h1 className="text-amber-50 text-2xl mb-12 md:col-span-9">Contact</h1>
 
                 <div className="font-bold flex items-center hover:cursor-pointer" onClick={() => {copyToClipboard(Info.email)}}>
                     <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -41,23 +88,33 @@ export const ContactSection = () => {
                     <span className="ml-2">{Info.number}</span>
                 </div>
 
-                <div className="md:col-start-2 mt-6">
-                    <form className="bg-red-50 text-black p-3 md:p-5 rounded grid grid-cols-2 w-72 md:w-96">
-                        <label className="text-start mb-1">Name:</label>
-                        <label className="text-start ml-2 mb-1">Email:</label>
+                <div className="md:col-start-2 mt-12">
+                    <form onSubmit={sendMessage} className="bg-red-50 text-black p-3 md:p-5 rounded grid grid-cols-4 w-72 md:w-96">
+                        <label className="text-start mb-1 col-span-2">Name:</label>
+                        <label className="text-start ml-2 mb-1 col-span-2">Email:</label>
 
-                        <input className="mr-2 bg-transparent outline outline-1 outline-offset-4 rounded"
-                               type="text" id="name" name="name" placeholder="John Doe"/>
-                        <input className="ml-2 bg-transparent outline outline-1 outline-offset-4 rounded"
-                               type="email" id="email" name="email" placeholder="johndoe@gmail.com"/>
+                        <input className="col-span-2 mr-2 bg-transparent outline outline-1 outline-offset-4 rounded"
+                               type="text" id="name" name="name" placeholder="John Doe"
+                               onChange={(e) => {handleInput(e, "name")}}
+                               value={name}/>
+                        <input className="col-span-2 ml-2 bg-transparent outline outline-1 outline-offset-4 rounded"
+                               type="email" id="email" name="email" placeholder="johndoe@gmail.com"
+                               onChange={(e) => {handleInput(e, "email")}}
+                               value={email}/>
 
-                        <label className="text-start col-span-2 mt-2 mb-1">Message:</label>
-                        <input className="bg-transparent col-span-2 outline outline-1 outline-offset-4 rounded"
-                                type="text" id="message" name="message" placeholder="Hey Ben, I'm John!"/>
+                        <label className="text-start col-span-4 mt-2 mb-1">Message:</label>
+                        <input className="bg-transparent col-span-4 outline outline-1 outline-offset-4 rounded"
+                                type="text" id="message" name="message" placeholder="Hey Ben, I'm John!"
+                               onChange={(e) => {handleInput(e, "message")}}
+                               value={message}/>
+
+                        <button type="submit" className="bg-transparent border-2 border-black
+                         rounded shadow hover:bg-black hover:text-white mt-5
+                         col-span-2 col-start-2">Send Message</button>
                     </form>
                 </div>
 
-                <div className="md:col-start-2 mb-2 mt-2">
+                <div className="md:col-start-2 mb-2 mt-6">
                     <button className="border-2 rounded shadow p-2 mt-2"><Link className="flex items-center hover:cursor-pointer" to="hero" spy={true} smooth={true} duration={500}>Back to Top<svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ml-2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 9l6-6m0 0l6 6m-6-6v12a6 6 0 01-12 0v-3" />
                     </svg></Link>

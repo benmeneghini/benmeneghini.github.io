@@ -6,6 +6,7 @@ import {HeroSection} from "../components/HeroSection";
 import {AboutSection} from "../components/AboutSection";
 import {ProjectSection} from "../components/ProjectSection";
 import {ContactSection} from "../components/ContactSection";
+import DangerAlert from "../components/DangerAlert";
 
 const Home = () => {
 
@@ -34,6 +35,7 @@ const Home = () => {
         <div className="font-mono">
             <div className="flex justify-end">
                 <SuccessAlert />
+                <DangerAlert />
             </div>
 
             <div id="hero">
