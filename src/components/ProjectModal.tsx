@@ -1,6 +1,6 @@
 const ProjectModal = () => {
     return (
-        <div>Not Found</div>
+        <div></div>
     )
 }
 
