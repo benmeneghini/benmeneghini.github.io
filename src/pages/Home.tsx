@@ -5,6 +5,7 @@ import {AboutSection} from "../components/AboutSection";
 import {ProjectSection} from "../components/ProjectSection";
 import {ContactSection} from "../components/ContactSection";
 import DangerAlert from "../components/DangerAlert";
+import ProjectModal from "../components/ProjectModal";
 
 const Home = () => {
 
@@ -34,6 +35,7 @@ const Home = () => {
             <div className="flex justify-end">
                 <SuccessAlert />
                 <DangerAlert />
+                <ProjectModal />
             </div>
 
             <div id="hero">
@@ -63,20 +65,21 @@ const Home = () => {
                 </div>
             </div>
 
-            <div id="main" className=" bg-red-50 md:ml-40 px-12 py-5 z-50 shadow-2xl
-            border-t-2 border-b-2 border-neutral-950">
+            <div id="main" className=" bg-red-50 md:ml-40 px-12 py-5 z-50 shadow-2xl">
+
+                <hr className="border-neutral-950 mt-5 mb-5"/>
 
                 <div id="about">
                     <AboutSection />
                 </div>
 
-                <br/>
-                <hr className="border-neutral-950"/>
-                <br/>
+                <hr className="border-neutral-950 mt-10 mb-10"/>
 
-                <div id="projects">
+                <div id="projects" className="mb-5">
                     <ProjectSection />
                 </div>
+
+                <hr className="border-neutral-950 mt-10 mb-10"/>
 
             </div>
 

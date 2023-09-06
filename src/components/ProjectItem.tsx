@@ -1,6 +1,7 @@
 import {FC} from "react";
 
 interface ProjectItemProps {
+    index: number;
     project: {
         title: string;
         description: string;
@@ -11,22 +12,24 @@ interface ProjectItemProps {
     };
 }
 
-const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
+const ProjectItem: FC<ProjectItemProps> = (props) => {
+    console.log(props.index);
     return (
-        <div className="w-full flex justify-center">
+        <div className={`w-full flex justify-center col-span-2 min-w-fit
+         ${props.index === 4 ? "md:col-start-2 lg:col-start-4" : ""} ${props.index === 3 ? "lg:col-start-2" : ""}`}>
             <div
-                className="w-full max-w-sm h-96 bg-white border border-gray-200 rounded-lg shadow dark:bg-red-50
+                className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-red-50
                 dark:border-gray-700 m-3">
                 <div className="max-h-40">
-                    <img className="max-h-40 w-full rounded-t-lg object-cover" src={`${process.env.PUBLIC_URL}/${project.imageName}`} alt=""/>
+                    <img className="max-h-40 w-full rounded-t-lg object-cover" src={`${process.env.PUBLIC_URL}/${props.project.imageName}`} alt=""/>
                 </div>
-                <div className="p-5">
+                <div className="p-3">
                     <h5 className="text-2xl font-bold tracking-tight text-neutral-950">
-                        {project.title}
+                        {props.project.title}
                     </h5>
-                    <p className="mb-3 font-normal text-gray-500">{project.date}</p>
+                    <p className="mb-3 font-normal text-gray-500">{props.project.date}</p>
                     <p className="mb-3 font-normal text-neutral-950">
-                        {project.description}
+                        Technologies: {props.project.technologies.join(', ')}
                     </p>
                     <a href="#"
                        className="inline-flex items-center px-3 py-2 text-sm font-medium text-center

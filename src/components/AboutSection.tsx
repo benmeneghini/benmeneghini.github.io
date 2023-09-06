@@ -14,7 +14,7 @@ export const AboutSection = () => {
     const resumeFilename = "Ben_Meneghini_Resume.pdf";
     const pdfUrl = process.env.PUBLIC_URL + '/' + resumeFilename;
     return (
-        <div  className="pt-5">
+        <div className="pt-5">
             <h1 className="text-3xl">About</h1>
             <br/>
             <span>{Info.about_1}</span>
