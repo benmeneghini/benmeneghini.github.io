@@ -11,7 +11,7 @@ const showDownloadSuccessMessage = () => {
 }
 
 export const AboutSection = () => {
-    const resumeFilename = "Ben_Meneghini_Resume.pdf";
+    const resumeFilename = "Ben-Meneghini-Resume.pdf";
     const pdfUrl = process.env.PUBLIC_URL + '/' + resumeFilename;
     return (
         <div className="pt-5">

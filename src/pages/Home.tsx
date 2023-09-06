@@ -35,7 +35,6 @@ const Home = () => {
             <div className="flex justify-end">
                 <SuccessAlert />
                 <DangerAlert />
-                <ProjectModal />
             </div>
 
             <div id="hero">
@@ -64,6 +63,8 @@ const Home = () => {
                     </button>
                 </div>
             </div>
+
+            <ProjectModal />
 
             <div id="main" className=" bg-red-50 md:ml-40 px-12 py-5 z-50 shadow-2xl">
 
