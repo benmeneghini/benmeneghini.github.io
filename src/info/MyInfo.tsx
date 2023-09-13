@@ -38,7 +38,7 @@ const Projects = [
             "sessions.",
         date: "20-02-2023",
         imageName: "hopper.png",
-        technologies: ["Java", "Javascript", "Bootstrap", "HTML / CSS", "SQL", "SpringBoot", "Gradle"],
+        technologies: ["Java", "Javascript", "Bootstrap", "HTML / CSS / SCSS", "SQL", "SpringBoot", "Gradle"],
         link: ""
     },
     {
@@ -48,7 +48,7 @@ const Projects = [
             "an API specification, together with a database specification and implemented each of these.",
         date: "20-04-2023",
         imageName: "apiServer.png",
-        technologies: ["ExpressJS", "React", "Typescript", "MUI", "JSX / CSS", "SQL"],
+        technologies: ["ExpressJS", "Typescript", "SQL"],
         link: ""
     },
     {
