@@ -5,7 +5,7 @@ export const HeroSection = () => {
                 <p>Ben</p>
                 <p>Meneghini.</p>
             </div>
-            <svg className="invisible md:visible h-screen fixed z-[-50]" width="1440" height="560" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 1440 560">
+            <svg className="invisible md:visible h-screen fixed z-[-50] w-full" width="1440" height="560" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 1440 560">
                 <g mask="url(&quot;#SvgjsMask1002&quot;)" fill="none">
                     <rect width="1440" height="560" x="0" y="0" fill="rgba(254, 242, 242, 1)"></rect>
                     <path d="M685.65 598.61C785.27 578.96 731.99 338.21 985.15 324.27 1238.3 310.33 1426.6 130.74 1584.14 128.27" stroke="rgba(69, 10, 10, 0.58)" strokeWidth={2}></path>
