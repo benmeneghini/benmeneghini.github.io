@@ -1,6 +1,6 @@
 const Info = {
     "about_1": "I'm an aspiring software engineer with a passion for crafting innovative solutions and pushing\n" +
-        "            the boundaries of what I perceive as impossible. With a keen interest in problem-solving and a knack for logical thinking,\n" +
+        "            the boundaries of my abilities. With a keen interest in problem-solving and a knack for logical thinking,\n" +
         "            I'm constantly seeking new challenges to enhance my skills and broaden my knowledge in the \n" +
         "            software industry. " ,
     "about_2": "I thrive on the creative process of turning ideas into functional and user-friendly\n" +
