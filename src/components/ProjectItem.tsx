@@ -39,7 +39,7 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
          className={`w-full flex justify-center col-span-2 min-w-fit
          ${props.index === 3 ? "lg:col-start-3" : ""}`}>
             <div
-                className="w-full flex flex-col max-w-sm bg-white border border-gray-200 rounded-lg shadow-2xl dark:bg-red-50
+                className="w-full flex flex-col max-w-sm bg-white border border-gray-200 rounded-lg shadow-2xl
                 dark:border-gray-700 m-3">
                 <div className="max-h-40">
                     <img className="max-h-40 w-full rounded-t-lg object-cover" src={`${process.env.PUBLIC_URL}/${props.project.imageName}`} alt=""/>

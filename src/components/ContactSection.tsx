@@ -67,7 +67,7 @@ export const ContactSection = () => {
     return (
         <div className="flex md:ml-40 justify-center bg-neutral-950">
             <div className="text-center text-amber-50 px-12 py-5 md:grid md:grid-cols-3 place-items-center">
-                <h1 className="text-amber-50 text-3xl mb-12 md:col-span-3 md:row-span-3">Contact</h1>
+                <h1 className="text-3xl mb-12 md:col-span-3 md:row-span-3">Contact</h1>
 
                 <div className="font-bold flex items-center justify-center hover:cursor-pointer mt-6" onClick={() => {copyToClipboard(Info.email)}}>
                     <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -88,7 +88,7 @@ export const ContactSection = () => {
                 </div>
 
                 <div className="md:col-span-3 mt-12 mb-8">
-                    <form onSubmit={sendMessage} className="bg-red-50 text-black p-5 rounded grid grid-cols-4">
+                    <form onSubmit={sendMessage} className=" bg-white text-black p-5 rounded grid grid-cols-4">
                         <label className="text-start mb-1 col-span-2">Name:</label>
                         <label className="text-start ml-2 mb-1 col-span-2">Email:</label>
 
