@@ -65,7 +65,7 @@ export const ContactSection = () => {
     }
 
     return (
-        <div className="flex md:ml-40 justify-center bg-neutral-950">
+        <div className="flex pt-24 pb-12 md:ml-40 justify-center bg-neutral-950">
             <div className="text-center text-amber-50 px-12 py-5 md:grid md:grid-cols-3 place-items-center">
                 <h1 className="text-3xl mb-12 md:col-span-3 md:row-span-3">Contact</h1>
 

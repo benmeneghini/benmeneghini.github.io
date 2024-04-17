@@ -5,6 +5,7 @@ import {AboutSection} from "../components/AboutSection";
 import {ProjectSection} from "../components/ProjectSection";
 import {ContactSection} from "../components/ContactSection";
 import DangerAlert from "../components/DangerAlert";
+import { useEffect, useState } from 'react';
 
 const Home = () => {
 
@@ -28,6 +29,34 @@ const Home = () => {
             // closeIcon.style.visibility = "hidden";
         }
     }
+
+    const [activeSection, setActiveSection] = useState<string>('');
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const heroSection = document.getElementById('hero')!.offsetTop;
+            const aboutSection = document.getElementById('about')!.offsetTop;
+            const projectsSection = document.getElementById('projects')!.offsetTop;
+            const contactSection = document.getElementById('contact')!.offsetTop;
+
+            if (scrollPosition < aboutSection) {
+                setActiveSection('hero');
+            } else if (scrollPosition < projectsSection) {
+                setActiveSection('about');
+            } else if (scrollPosition < contactSection) {
+                setActiveSection('projects');
+            } else {
+                setActiveSection('contact');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <div className="font-mono">
@@ -63,11 +92,7 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* <ProjectModal /> */}
-
-            <div id="main" className=" bg-red-50 md:ml-40 px-12 py-5 z-50 shadow-2xl">
-
-                <hr className="border-neutral-950 mt-5 mb-5"/>
+            <div id="main" className=" bg-red-50 md:ml-40 px-12 py-5 z-50 shadow-2xl border-t pb-8 border-black">
 
                 <div id="about">
                     <AboutSection />
@@ -78,8 +103,6 @@ const Home = () => {
                 <div id="projects" className="mb-5">
                     <ProjectSection />
                 </div>
-
-                <hr className="border-neutral-950 mt-10 mb-10"/>
 
             </div>
 
