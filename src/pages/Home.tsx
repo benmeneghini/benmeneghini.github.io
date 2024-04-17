@@ -5,7 +5,6 @@ import {AboutSection} from "../components/AboutSection";
 import {ProjectSection} from "../components/ProjectSection";
 import {ContactSection} from "../components/ContactSection";
 import DangerAlert from "../components/DangerAlert";
-import ProjectModal from "../components/ProjectModal";
 
 const Home = () => {
 
@@ -64,7 +63,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <ProjectModal />
+            {/* <ProjectModal /> */}
 
             <div id="main" className=" bg-red-50 md:ml-40 px-12 py-5 z-50 shadow-2xl">
 

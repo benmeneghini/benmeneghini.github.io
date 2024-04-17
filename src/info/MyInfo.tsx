@@ -1,3 +1,5 @@
+import { title } from "process";
+
 const Info = {
     "about_1": "I'm an aspiring software engineer with a passion for crafting innovative solutions and pushing\n" +
         "            the boundaries of my abilities. With a keen interest in problem-solving and a knack for logical thinking,\n" +
@@ -27,7 +29,17 @@ const Projects = [
         link: ""
     },
     {
-        title: "Hopper - Team Analytics Web Application (In progress)",
+        title: "In-Kind Product Donation Web Application (WIP)",
+        description: "This project is a web application that I am working on myself for an external client as part of my " +
+            "Software Engineering course at University. The application is designed to allow businesses to donate their " +
+            "products to other businesses.",
+        date: "03-03-2024",
+        imageName: "donation.png",
+        technologies: ["React", "Typescript", "Node", "ExpressJS", "PostgreSQL", "Tailwind"],
+        link: ""
+    },
+    {
+        title: "Hopper - Team Analytics Web Application",
         description: "This project is a multi-user web application that I am currently working on with a group of" +
             "seven other individuals. For the period of the time that I have been working on this project, it has" +
             "given me valuable experience working within an agile team, and has highlighted the importance of effective" +
