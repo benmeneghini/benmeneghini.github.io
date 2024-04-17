@@ -34,7 +34,7 @@ const Projects = [
             "Software Engineering course at University. The application is designed to allow businesses to donate their " +
             "products to other businesses.",
         date: "03-03-2024",
-        imageName: "donation.png",
+        imageName: "",
         technologies: ["React", "Typescript", "Node", "ExpressJS", "PostgreSQL", "Tailwind"],
         link: ""
     },
@@ -65,20 +65,25 @@ const Projects = [
     },
     {
         title: "Personal Developer Portfolio",
-        description: "",
+        description: "This project is a personal portfolio website that I developed to showcase my skills and projects." +
+            "The objective of this project was to gain experience in developing a website from scratch, using different technologies" +
+            "and frameworks. I have utilised React, Node, and Tailwind to create this website.",
         date: "",
         imageName: "portfolio.png",
         technologies: ["Node", "React", "Typescript", "Tailwind", "JSX / CSS"],
         link: "https://benmeneghini.me"
+    },
+    {
+        title: "Remote Helicopter Controller",
+        description: "This project was a pair project that I completed as part of my Software Engineering course at University." +
+            "It was part of my Embedded Systems course and helped me to utilisse different technologies and programming language such as C." +
+            "The objective of the project was to develop a program for a microcontroller that could be used to control a helicopter.",
+        date: "20-05-2023",
+        imageName: "",
+        technologies: ["C"],
+        link: ""
+
     }
-    // {
-    //     title: "P4",
-    //     description: "",
-    //     date: "",
-    //     imageName: "",
-    //     technologies: [],
-    //     link: ""
-    // },
 ]
 
 export {Info, Projects};
