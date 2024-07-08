@@ -36,7 +36,7 @@ const ProjectItem: FC<ProjectItemProps> = (props) => {
 
     return (
         <div
-         className={`w-full flex justify-center col-span-2 min-w-fit`}>
+         className={props.index===6?`w-full flex justify-center col-span-2 min-w-fit lg:col-start-3 md:col-start-2`:'w-full flex justify-center col-span-2 min-w-fit'}>
             <div
                 className="w-full flex flex-col max-w-sm bg-white border border-gray-200 rounded-lg shadow-2xl
                 dark:border-gray-700 m-3">

@@ -89,6 +89,7 @@ export const ContactSection = () => {
 
                 <div className="md:col-span-3 mt-12 mb-8">
                     <form onSubmit={sendMessage} className=" bg-white text-black p-5 rounded grid grid-cols-4">
+                        <h1 className="col-span-4 m-2 text-2xl">Send me a message!</h1>
                         <label className="text-start mb-1 col-span-2">Name:</label>
                         <label className="text-start ml-2 mb-1 col-span-2">Email:</label>
 
@@ -109,7 +110,7 @@ export const ContactSection = () => {
 
                         <button type="submit" className="bg-transparent border-2 border-black
                          rounded shadow hover:bg-black hover:text-white mt-5
-                         col-span-2 col-start-2">Send Message</button>
+                         col-span-2 col-start-2">Send</button>
                     </form>
                 </div>
 
