@@ -24,8 +24,8 @@ export const AboutSection = () => {
             <br />
             <br />
             <a href={pdfUrl} download={resumeFilename} target="_blank" rel="noopener noreferrer">
-                <button onClick={showDownloadSuccessMessage} className="text-black border-2 rounded shadow p-2 mt-2
-                hover:bg-neutral-950 hover:text-white border-neutral-950">Download Resume</button></a>
+                <button onClick={showDownloadSuccessMessage} className="text-white rounded shadow p-2 mt-2
+                hover:bg-neutral-50 hover:text-black bg-neutral-950">Download Resume</button></a>
         </div>
     )
 }
