@@ -7,7 +7,7 @@ export const HeroSection = () => {
                 <p>Ben</p>
                 <p>Meneghini.</p>
             </div>
-            <button className="border-2 absolute bottom-0 mb-2 w-fit ml-40 self-center rounded-full shadow p-2 mt-2 bg-white hover:bg-black hover:text-black">
+            <button className="border-2 absolute bottom-0 mb-2 w-fit md:ml-40 self-center rounded-full shadow p-2 mt-2 bg-white hover:bg-black hover:text-black">
                 <Link className="flex items-center hover:cursor-pointer" to="about" spy={true} smooth={true} duration={500}><svg className="w-6 h-6 text-black hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19V5m0 14-4-4m4 4 4-4"/>
                     </svg>
